@@ -186,4 +186,20 @@ nav {
   font-size: 14px;
 }
 
+.sect {
+  flex-direction: row;
+  width:100%;
+}
+
+.sect img {
+  width: 100%;
+}
+
+#about img{
+  flex:1;
+}
+#about p {
+  flex:2;
+}
+
 }
