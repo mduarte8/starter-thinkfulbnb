@@ -12,8 +12,9 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
+  margin: 10px 0px;
 }
 
 p {
@@ -34,9 +35,26 @@ main img {
   width: 100px;
 }
 
-/* ---  Groups & Items --- */
+header {
+  display: flex;
+  flex-direction: column;
+}
 
-.group {
+label {
+  display:inline-block;
+}
+
+/* ---  Groups & Items --- */
+.group-row {
+  display: flex;
+  flex-direcdtion: row;
+  justify-content: space-around;
+  margin: 10px;
+ 
+  border: 1px solid rgb(13, 219, 102);
+}
+
+.group-col {
   display: flex;
   flex-direction: column;
 }
@@ -44,10 +62,30 @@ main img {
 .item {
   flex: 1;
   margin: 10px;
+  justify-content: space-between;
+}
+
+.form-item {
+  border: 1px solid blue; 
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
 }
 
 .item-double {
   flex: 2;
+}
+
+.sect {
+  display: flex;
+  flex-direction: column;
+  padding:0px 20px;
+}
+.sect > img {
+  width: 100%;
+  margin: 20px 0px;
 }
 
 /* -------  Navigation ------- */
@@ -56,6 +94,7 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  width: auto;
 }
 
 .logo {
@@ -91,7 +130,7 @@ form label {
 
 form select,
 form input {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   width: 180px;
 }
 
@@ -117,3 +156,34 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (max-width:390px) {
+  .logo {
+    font-size: 40px;
+  }
+  label, input, select {
+    font-size: 12px;
+    display:block;
+    margin: 5px 0px;
+  }
+  form input, form select {
+    width:100%;
+  }
+  .form-item {
+    display:block
+  }
+}
+
+@media all and (min-width:480px) {
+.logo {
+  font-size: 40px;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav {
+  font-size: 14px;
+}
+
+}
