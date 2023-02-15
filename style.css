@@ -45,33 +45,36 @@ label {
 }
 
 /* ---  Groups & Items --- */
+.group {
+  display:flex;
+  flex-direction:row;
+}
 .group-row {
   display: flex;
-  flex-direcdtion: row;
+  flex-direction: row;
   justify-content: space-around;
   margin: 10px;
- 
-  border: 1px solid rgb(13, 219, 102);
 }
 
 .group-col {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .item {
-  flex: 1;
+  display:flex;
   margin: 10px;
   justify-content: space-between;
 }
 
 .form-item {
-  border: 1px solid blue; 
+  width:100%;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .item-double {
@@ -83,7 +86,7 @@ label {
   flex-direction: column;
   padding:0px 20px;
 }
-.sect > img {
+.sect img {
   width: 100%;
   margin: 20px 0px;
 }
@@ -186,20 +189,61 @@ nav {
   font-size: 14px;
 }
 
-.sect {
+#about > .sect {
   flex-direction: row;
-  width:100%;
+  display:flex;
 }
 
-.sect img {
-  width: 100%;
+#about-pics {
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#about-pics > div {
+  display:flex;
+  flex:1; 
+  align-items: center;
 }
 
-#about img{
+#about-pics img {
+ object-fit: contain;
+ margin:0px; 
+ align-items: center;
+}
+#about #about-para {
+  display:flex;
+  flex:2;
+  font-size: 12px;
+  align-items: center;
+}
+
+.row {
+  flex-direction: row;
+  gap: 10px;
+}
+.row > div {
   flex:1;
 }
-#about p {
-  flex:2;
+
+form {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+form > div {
+  width: 20%;
+  vertical-align: middle;
+}
+
+.form-item {
+  font-size: 12px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  margin: 0px;
 }
 
 }
+
