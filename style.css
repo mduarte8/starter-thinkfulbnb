@@ -232,11 +232,11 @@ form {
 }
 
 form > div {
-  width: 20%;
   vertical-align: middle;
 }
 
 .form-item {
+  width: 100%;
   font-size: 12px;
   display:flex;
   flex-direction: column;
@@ -245,5 +245,19 @@ form > div {
   margin: 0px;
 }
 
+form input, form select {
+  width: 50px;
 }
 
+}
+
+@media all and (min-width:630px){
+  form input, form select {
+    width: 90px;
+  }
+}
+@media all and (min-width:980px){
+  form input, form select {
+    width: 180px;
+  }
+}
